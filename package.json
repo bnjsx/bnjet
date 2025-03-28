@@ -1,6 +1,6 @@
 {
   "name": "bnjet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Essefri Mohamed",
   "license": "MIT",
   "description": "A simple bnjsx scaffolding tool to create projects in seconds.",
