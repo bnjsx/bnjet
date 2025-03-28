@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"tsc --watch --project tsconfig.server.json --incremental\" \"nodemon\"",
+    "start": "concurrently \"tsc --watch --project tsconfig.server.json --incremental\" \"wait-on dist/index.js && nodemon\"",
     "build": "vite build && tsc --project tsconfig.build.json",
     "preview": "vite preview",
     "test": "jest --coverage",
@@ -22,7 +22,8 @@
     "ts-jest": "^29.3.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.2",
-    "vite-plugin-full-reload": "^1.2.0"
+    "vite-plugin-full-reload": "^1.2.0",
+    "wait-on": "^8.0.3"
   },
   "dependencies": {
     "bnjsx": "^1.0.5",
