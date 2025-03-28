@@ -1,0 +1,35 @@
+/**
+ * TypeScript configuration for Vite project.
+ *
+ * - This configuration file is used for Vite's frontend development setup, optimized for modern JavaScript and TypeScript features.
+ * - The TypeScript files are processed from the `assets/ts/` folder, and the configuration ensures smooth integration with Vite.
+ */
+
+// prettier-ignore
+{
+  "compilerOptions": {
+    /* 🎯 Target & Compatibility */
+    "target": "ES2020",                       // ✅ Use modern JavaScript features
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // ✅ Include DOM typings for frontend development
+    "useDefineForClassFields": true,          // ✅ Aligns class field behavior with JavaScript
+
+    /* 📦 Module & Resolution */
+    "module": "ESNext",                       // ✅ Enables latest ES module syntax
+    "moduleResolution": "bundler",            // ✅ Optimized for bundlers like Vite
+    "moduleDetection": "force",               // ✅ Ensures modules are detected properly
+    "allowImportingTsExtensions": true,       // ✅ Allows direct imports of .ts files
+    "isolatedModules": true,                  // ✅ Ensures each file is treated as a separate module
+    "noEmit": true,                           // ✅ Prevents TypeScript from emitting compiled files
+    
+    /* 🚀 Performance & Type Checking */
+    "skipLibCheck": true,                     // ✅ Skips type checking of declaration files (faster builds)
+    "strict": true,                           // ✅ Enables strict type checking
+    "noUnusedLocals": true,                   // ✅ Catches unused variables
+    "noUnusedParameters": true,               // ✅ Catches unused function parameters
+    "noFallthroughCasesInSwitch": true,       // ✅ Prevents missing switch cases
+    "noUncheckedSideEffectImports": true      // ✅ Helps catch side-effect-only imports
+  },
+
+  /* 📌 Included Files */
+  "include": ["assets/ts"]                    // ✅ Only process TypeScript files inside `assets/ts/`
+}

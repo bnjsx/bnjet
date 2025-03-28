@@ -1,0 +1,26 @@
+/**
+ * TypeScript configuration for BNJSX backend application.
+ *
+ * - This configuration file is used when running the BNJSX server (via `npm start`) to compile and manage backend TypeScript code.
+ * - It defines how TypeScript compiles the source code and where the compiled output should be placed.
+ */
+
+// prettier-ignore
+{
+  "compilerOptions": {
+    "outDir": "./dist",                         // ✅ Compiled JavaScript files go here
+    "rootDir": "./src",                         // ✅ Keeps source files structured in the `src/` directory
+    "module": "CommonJS",                       // ✅ CommonJS module format (standard for Node.js)
+    "target": "ES2022",                         // ✅ Targets ES2022 for compatibility with modern Node.js
+    "strict": false,                            // ✅ Set to `true` for stricter type checking
+    "esModuleInterop": true,                    // ✅ Enables interoperability between CommonJS and ESModules
+    "resolveJsonModule": true,                  // ✅ Allows importing JSON files as modules
+    "skipLibCheck": true,                       // ✅ Skips type checking of declaration files for faster builds
+    "incremental": true,                        // ✅ Enables faster subsequent builds by caching build info
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",  // ✅ Caches build info to make subsequent builds faster
+    "sourceMap": true,                           // ✅ Generates source maps to aid debugging
+    "isolatedModules": true,
+  },
+  "include": ["src"],                           // ✅ Only compile files inside the `src/` folder
+  "exclude": ["node_modules", "dist"]           // ✅ Excludes `node_modules` and `dist` from compilation
+}

@@ -1,0 +1,36 @@
+/**
+ * TypeScript configuration for BNJSX project.
+ *
+ * - This configuration file is used when running `npm run build` to compile your TypeScript code.
+ * - The build output will be placed in the `app` directory, and the source files are maintained in the `src` directory.
+ */
+
+// prettier-ignore
+{
+  "compilerOptions": {
+    /* 📂 Output Configuration */
+    "outDir": "app",                        // ✅ Compiled JavaScript files go here
+    "rootDir": "src",                       // ✅ Keeps source files structured
+   
+    /* 📦 Module & Interop */
+    "module": "CommonJS",                   // ✅ Use CommonJS modules (standard for Node.js)
+    "moduleResolution": "Node",             // ✅ Ensures Node.js module resolution
+    "esModuleInterop": true,                // ✅ Fixes compatibility between CommonJS & ESM modules
+    "allowSyntheticDefaultImports": true,   // ✅ Allows default imports from CommonJS modules
+
+    /* 🎯 Target & Compatibility */
+    "target": "ES2018",                     // ✅ Modern JavaScript for Node.js
+    "lib": ["ES2018"],                      // ✅ No DOM-related libraries (only ES features)
+
+    /* 🛠️ Type Checking & Linting */
+    "strict": false,                        // ✅ (Set to true for stricter type checking)
+    "noImplicitAny": true,                  // ✅ Prevents untyped variables
+    "noUnusedLocals": true,                 // ✅ Catches unused variables
+    "noUnusedParameters": true,             // ✅ Catches unused function parameters
+    "noFallthroughCasesInSwitch": true,     // ✅ Prevents missing switch cases
+    "skipLibCheck": true                    // ✅ Speeds up compilation by skipping library checks
+  },
+
+  /* 📌 Included Files */
+  "include": ["src"],                        // ✅ Only compile files inside the `src/` folder
+}

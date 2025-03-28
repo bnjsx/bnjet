@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-50: #ffea00;
+  --color-primary-100: #ffdd00;
+  --color-primary-200: #ffd000;
+  --color-primary-300: #ffc300;
+  --color-primary-400: #ffb700;
+  --color-primary-500: #ffaa00;
+  --color-primary-600: #ffa200;
+  --color-primary-700: #ff9500;
+  --color-primary-800: #ff8800;
+  --color-primary-900: #ff7b00;
+  --color-primary-950: #6a040f;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffe946aa);
+}

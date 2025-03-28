@@ -1,0 +1,1 @@
+<p class="font-light text-gray-500">$(title)</p>
